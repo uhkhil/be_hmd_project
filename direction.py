@@ -1,4 +1,4 @@
-# Get the directions from https://maps.googleapis.com/maps/api/directions/json?origin=18.5553705,73.87762109999994&destination=18.5329493,73.87961700000005&key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY
+# Get the directions from https://maps.googleapis.com/maps/api/directions/json?origin=18.5553705,73.87762109999994&destination=18.5329493,73.87961700000005&key=API_KEY
 
 import json
 import pyproj
@@ -88,15 +88,9 @@ for i in range(len(lat)):
 print
 
 
-print "Paste this into js"
 z_coord_new = []
 for i in range(len(x_coord_new)):
 	z_coord_new.append(0)
-	print "geometry.vertices.push(new THREE.Vector3("+ str(x_coord_new[i]) +", "+ str(y_coord_new[i]) +", "+ str(z_coord_new[i]) +"));"
-
-
-
-# Conversion shit
 
 
 
