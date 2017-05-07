@@ -8,4 +8,4 @@ Overview of the project file structure:
 4) js/ : Contains the scripts for index.html.
 
 Dependencies:
-1) The python code requires various modules. On linux : pip install <modulename>
+1) The python code requires various modules. On linux (without quotes): pip install "modulename" 

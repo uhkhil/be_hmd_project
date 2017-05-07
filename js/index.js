@@ -21,9 +21,11 @@ app.controller('myCtrl', function($scope, $http) {
 			camera.position.set(0, 0, 1);
 			camera.lookAt(new THREE.Vector3(x_list[1], 9999999999999999999999999, 0));
 
-			var renderer = new THREE.WebGLRenderer();
+			var renderer = new THREE.WebGLRenderer({ alpha: true });
+			renderer.setClearColor( 0xffffff, 0);
 			renderer.setSize( 320, 240 );
-			document.body.appendChild( renderer.domElement );
+
+			document.getElementById('canvas').appendChild( renderer.domElement );
 
 			var geometry = new THREE.Geometry();
 
@@ -31,10 +33,8 @@ app.controller('myCtrl', function($scope, $http) {
 				geometry.vertices.push(new THREE.Vector3(x_list[i], y_list[i], z_list[i]));
 			}
 
-
-
 			var material = new THREE.LineBasicMaterial({ 
-				color: 0x0000ff ,
+				color: 0x32cd32 ,
 				linewidth: 1,
 				linecap: 'round', //ignored by WebGLRenderer
 				linejoin:  'round' //ignored by WebGLRenderer

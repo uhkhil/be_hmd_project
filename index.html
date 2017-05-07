@@ -6,12 +6,9 @@
 </head>
 <body cz-shortcut-listen="true" ng-app="myApp" ng-controller="myCtrl">
 
-    
-    <div style="position:relative;">
-        <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="image" style="position:absolute;">
-        <canvas id="canvas" width="320" height="240" style="position:relative;">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
+
+    <div id="canvas" style="position:relative;">
+        <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="The live feed comes here" style="position:absolute; z-index: -100;">
     </div>
     <!-- <p>{{ name }}</p> -->
 
