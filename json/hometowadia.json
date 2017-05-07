@@ -1,0 +1,373 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJX7kgSd3AwjsRJTcwKAfGZ-s",
+         "types" : [ "street_address" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ2Ul0TPjAwjsRkFn2yOgKv-c",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 18.556797,
+               "lng" : 73.8853852
+            },
+            "southwest" : {
+               "lat" : 18.533113,
+               "lng" : 73.87124179999999
+            }
+         },
+         "copyrights" : "Map data ©2017 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "4.8 km",
+                  "value" : 4815
+               },
+               "duration" : {
+                  "text" : "14 mins",
+                  "value" : 820
+               },
+               "end_address" : "8, Bund Garden Rd, Sangamvadi, Pune, Maharashtra 411001, India",
+               "end_location" : {
+                  "lat" : 18.5331148,
+                  "lng" : 73.87961369999999
+               },
+               "start_address" : "B1, Hari Ganga Society, Swatantrya Sainik Nagar, Yerawada, Pune, Maharashtra 411006, India",
+               "start_location" : {
+                  "lat" : 18.5557686,
+                  "lng" : 73.8777094
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 101
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 33
+                     },
+                     "end_location" : {
+                        "lat" : 18.5555813,
+                        "lng" : 73.87864879999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003eeast\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "qdgpBuf|aMd@{D"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5557686,
+                        "lng" : 73.8777094
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "42 m",
+                        "value" : 42
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 22
+                     },
+                     "end_location" : {
+                        "lat" : 18.5559501,
+                        "lng" : 73.87873879999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e toward \u003cb\u003eLoop Nagar Rd\u003c/b\u003e/\u003cb\u003eSir Bhandakar Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "kcgpBql|aMiAQ"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5555813,
+                        "lng" : 73.87864879999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 333
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 62
+                     },
+                     "end_location" : {
+                        "lat" : 18.556797,
+                        "lng" : 73.8757138
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eLoop Nagar Rd\u003c/b\u003e/\u003cb\u003eSir Bhandakar Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "uegpBcm|aMCNQtASrA]fBS`AADWnASdA_@|A"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5559501,
+                        "lng" : 73.87873879999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 186
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 35
+                     },
+                     "end_location" : {
+                        "lat" : 18.555314,
+                        "lng" : 73.87490950000002
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "_kgpBez{aM~Aj@RHxC|AVHB@"
+                     },
+                     "start_location" : {
+                        "lat" : 18.556797,
+                        "lng" : 73.8757138
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.8 km",
+                        "value" : 838
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 96
+                     },
+                     "end_location" : {
+                        "lat" : 18.5486903,
+                        "lng" : 73.87124179999999
+                     },
+                     "html_instructions" : "Continue straight",
+                     "maneuver" : "straight",
+                     "polyline" : {
+                        "points" : "uagpBeu{aMD@dC^l@JVDbARRFFDLF|B|AdAj@dBz@PHt@d@~@f@nDdBlB`Ap@`@x@f@z@`@TLTJZRj@^"
+                     },
+                     "start_location" : {
+                        "lat" : 18.555314,
+                        "lng" : 73.87490950000002
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.5 km",
+                        "value" : 1504
+                     },
+                     "duration" : {
+                        "text" : "4 mins",
+                        "value" : 235
+                     },
+                     "end_location" : {
+                        "lat" : 18.5452353,
+                        "lng" : 73.88362149999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eDeccan College Rd\u003c/b\u003e/\u003cb\u003ePhule Nagar - Akluj Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Deccan College Ground (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "ixepBg~zaM^w@LYb@y@r@qANUbHiMxEwIlAwBHMx@sAJMh@y@fB}CHYDYBW?WA[EWSw@U{@K_@Ie@Gm@KeAGm@Ik@Mi@Me@Sk@Yq@OY_@s@KUKY?CK[CKAIMy@EY"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5486903,
+                        "lng" : 73.87124179999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 124
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 30
+                     },
+                     "end_location" : {
+                        "lat" : 18.5451136,
+                        "lng" : 73.88477739999999
+                     },
+                     "html_instructions" : "Keep \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eDeccan College Rd\u003c/b\u003e/\u003cb\u003ePhule Nagar - Akluj Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Bharat Ratna Swa Rajiv Gandhi Hospital (on the left)\u003c/div\u003e",
+                     "maneuver" : "keep-left",
+                     "polyline" : {
+                        "points" : "wbepBsk}aMCm@AY?Q?Q^{B"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5452353,
+                        "lng" : 73.88362149999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "27 m",
+                        "value" : 27
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 5
+                     },
+                     "end_location" : {
+                        "lat" : 18.5448717,
+                        "lng" : 73.88477139999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eDeccan College Rd\u003c/b\u003e/\u003cb\u003ePhule Nagar - Akluj Rd\u003c/b\u003e/\u003cb\u003ePune - Ahmednagar Rd\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "}aepB{r}aMn@@"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5451136,
+                        "lng" : 73.88477739999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 380
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 47
+                     },
+                     "end_location" : {
+                        "lat" : 18.5416107,
+                        "lng" : 73.8853852
+                     },
+                     "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e to continue on \u003cb\u003ePhule Nagar - Akluj Rd\u003c/b\u003e/\u003cb\u003ePune - Ahmednagar Rd\u003c/b\u003e/\u003cb\u003eYerawada Bridge\u003c/b\u003e",
+                     "maneuver" : "keep-right",
+                     "polyline" : {
+                        "points" : "m`epByr}aM@Pf@ItAQtAQdG}@~@MBANK@?\\Az@C"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5448717,
+                        "lng" : 73.88477139999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 113
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 17
+                     },
+                     "end_location" : {
+                        "lat" : 18.5412344,
+                        "lng" : 73.88443149999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eAkluj - Phule Nagar Rd\u003c/b\u003e/\u003cb\u003ePune - Ahmednagar Rd\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "aldpBuv}aMJHFFDFJNFRRbAFX@b@"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5416107,
+                        "lng" : 73.8853852
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.0 km",
+                        "value" : 1038
+                     },
+                     "duration" : {
+                        "text" : "4 mins",
+                        "value" : 210
+                     },
+                     "end_location" : {
+                        "lat" : 18.5336779,
+                        "lng" : 73.87889679999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBund Garden Rd\u003c/b\u003e/\u003cb\u003ePune - Ahmednagar Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Wadia College SO Post Office (on the left in 950&nbsp;m)\u003c/div\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "uidpBup}aMFHBDBDBRF\\@N@D@HDJHJPP\\RB@t@`@j@\\v@d@zQ~J|CdBxCfBlBnARLhBlAB@TL\\RRLNLHH"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5412344,
+                        "lng" : 73.88443149999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "63 m",
+                        "value" : 63
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 10
+                     },
+                     "end_location" : {
+                        "lat" : 18.5331195,
+                        "lng" : 73.87898969999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e after \u003cb\u003eWadia College Chowk\u003c/b\u003e (on the right)",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "ozbpBcn|aMD?z@Kl@E"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5336779,
+                        "lng" : 73.87889679999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "66 m",
+                        "value" : 66
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 18
+                     },
+                     "end_location" : {
+                        "lat" : 18.5331148,
+                        "lng" : 73.87961369999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eRestricted usage road\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "_wbpBun|aM@y@?K?Y?G?S"
+                     },
+                     "start_location" : {
+                        "lat" : 18.5331195,
+                        "lng" : 73.87898969999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "qdgpBuf|aMd@{DiAQUdBq@zDUfAk@tC_@|A~Aj@lDfBZJpEr@vAZTL|B|AdAj@vBdAtBlA|GfDjBhApAn@p@^j@^^w@p@sAbAgB|NaXvAeCdAaBh@y@fB}CNs@Bo@Gs@i@sBUeASsBQyA[oAm@}Ao@mAc@oAYiBEgA?c@^{Bn@@@Pf@IjDc@dIkARM^Az@CJHLNRb@Z|A@b@FHFJNfAFTZ\\bCtArSdLvHlEnFlDvA|@HHD?hBQ@gB?S"
+         },
+         "summary" : "Phule Nagar - Akluj Rd",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

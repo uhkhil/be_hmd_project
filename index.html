@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>BE Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body cz-shortcut-listen="true" ng-app="myApp" ng-controller="myCtrl">
+
+    
+    <div style="position:relative;">
+        <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="image" style="position:absolute;">
+        <canvas id="canvas" width="320" height="240" style="position:relative;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+    <!-- <p>{{ name }}</p> -->
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function errorFunction() {
+            alert('Stream stopped');
+        }
+    </script>
+
+</body>
+</html>
