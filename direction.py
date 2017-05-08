@@ -57,6 +57,10 @@ print
 x_init = x_coord[0]
 y_init = y_coord[0]
 
+init_points_file = open('json/initial.json', 'w')
+init_points_file.write("["+str(x_init)+","+str(y_init)+"]")
+init_points_file.close()
+
 for i in range(len(x_coord)):
 	x_coord[i] -= x_init
 	y_coord[i] -= y_init
