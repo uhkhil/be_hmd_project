@@ -22,8 +22,13 @@ for new_data in gps_socket:
         if (type(data_stream.TPV['lon']) == float):
 		    temp_list[0] = data_stream.TPV['lon']
 		    temp_list[1] = data_stream.TPV['lat']
+		    
+		    output_file = open("json/current_location_map.json", 'w')
+		    output_file.write("["+str(temp_list[1])+","+str(temp_list[0])+"]")
+		    output_file.close()
+
 		    x,y = p1(temp_list[0],temp_list[1])
 		    print x-x_init, y-y_init
-		    output_file = open("json/current_location.json", 'w')
-		    output_file.write("["+str(temp_list[0])+","+str(temp_list[1])+"]")
+		    output_file = open("json/current_location_x.json", 'w')
+		    output_file.write("["+str(x-x_init)+","+str(y-y_init)+"]")
 		    output_file.close()

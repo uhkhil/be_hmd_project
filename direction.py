@@ -1,5 +1,6 @@
 # Get the directions from https://maps.googleapis.com/maps/api/directions/json?origin=18.5553705,73.87762109999994&destination=18.5329493,73.87961700000005&key=API_KEY
 
+import urllib
 import json
 import pyproj
 import math
@@ -9,9 +10,19 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 
+
 # Fetching JSON directions and storing into a list
 
-json_data = open('json/hometowadia.json').read()
+
+current_location = open('json/current_location_map.json','r').read()
+current_location = json.loads(current_location)
+print current_location[0], current_location[1]
+target_url = "https://maps.googleapis.com/maps/api/directions/json?origin="+str(current_location[0])+","+str(current_location[1])+"&destination=18.5329493,73.87961700000005&key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY"
+print "Fetching directions from source to destination..."
+json_data = urllib.urlopen(target_url).read()
+
+
+# json_data = open('json/hometowadia.json').read()
 # json_data = open('json/dorabjeetoairport.json').read()
 
 data = json.loads(json_data)
@@ -121,6 +132,7 @@ outputfile.close()
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 ax.plot(x_coord_new, y_coord_new, z_coord_new, label='Source to Destination')
+plt.axis('equal')
 ax.legend()
 
 plt.show()
