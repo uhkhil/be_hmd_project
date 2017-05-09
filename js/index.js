@@ -1,6 +1,12 @@
 var app = angular.module('myApp', []);
 
-app.controller('myCtrl', function($scope, $http) {
+app.controller('myCtrl', function($scope, $http, $interval) {
+	$scope.look_x = 0;
+	$scope.look_y = 0;
+	$scope.look_z = 0;
+	$scope.pos_x = 0;
+	$scope.pos_y = 0;
+	$scope.pos_z = 500;
 	$scope.name = 'Akhil';
 	var x_list;
 	$scope.fetched_data = []
@@ -17,13 +23,13 @@ app.controller('myCtrl', function($scope, $http) {
 			//  Three JS Script
 
 			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera(62.2, 320/240, 1, 500 );
-			camera.position.set(0, 0, 1);
-			camera.lookAt(new THREE.Vector3(x_list[1], 9999999999999999999999999, 0));
+			var camera = new THREE.PerspectiveCamera(62.2, 320/240, 1, 5000 );
 
 			var renderer = new THREE.WebGLRenderer({ alpha: true });
 			renderer.setClearColor( 0xffffff, 0);
 			renderer.setSize( 320, 240 );
+
+
 
 			document.getElementById('canvas').appendChild( renderer.domElement );
 
@@ -35,7 +41,7 @@ app.controller('myCtrl', function($scope, $http) {
 
 			var material = new THREE.LineBasicMaterial({ 
 				color: 0x32cd32 ,
-				linewidth: 1,
+				linewidth: 10,
 				linecap: 'round', //ignored by WebGLRenderer
 				linejoin:  'round' //ignored by WebGLRenderer
 
@@ -44,8 +50,30 @@ app.controller('myCtrl', function($scope, $http) {
 			var line = new THREE.Line(geometry, material);
 
 			scene.add(line);
-			renderer.render(scene, camera);
 
+			var fetch_current_position = function () {
+
+				$interval(function() {
+
+
+					$http.get('json/current_location_x.json').then(function(response) {
+						$scope.current_location = response.data;
+						console.log($scope.current_location);
+
+						camera.position.set($scope.pos_x , $scope.pos_y , $scope.pos_z);
+						camera.lookAt(new THREE.Vector3($scope.look_x, $scope.look_y, $scope.look_z));
+						
+						renderer.render(scene, camera);
+
+					});
+
+
+				},1);
+
+
+			};
+
+			fetch_current_position();
 
 		});
 	};

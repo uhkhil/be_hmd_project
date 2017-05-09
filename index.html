@@ -3,13 +3,35 @@
     <title>BE Project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body cz-shortcut-listen="true" ng-app="myApp" ng-controller="myCtrl">
 
 
-    <div id="canvas" style="position:relative;">
+    <div id="canvas" style="position:relative;border: 1px solid black">
         <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="The live feed comes here" style="position:absolute; z-index: -100;">
     </div>
+    <br><br>
+    <div class="col-md-4">
+        <h4>Where the camera is looking at:</h4>
+        <input type="range" id="x" min="-2000" max="2000" step="1" ng-model="look_x">
+        <p>x: {{ look_x }}</p>
+        <input type="range" id="y" min="-2000" max="2000" step="1" ng-model="look_y">
+        <p>y: {{ look_y }}</p>
+        <input type="range" id="z" min="1" max="2000" step="1" ng-model="look_z">
+        <p>z: {{ look_z }}</p>
+    </div>
+
+    <div class="col-md-4">
+        <h4>Camera position:</h4>
+        <input type="range" id="x" min="-2000" max="2000" step="1" ng-model="pos_x">
+        <p>x: {{ pos_x }}</p>
+        <input type="range" id="y" min="-2000" max="2000" step="1" ng-model="pos_y">
+        <p>y: {{ pos_y }}</p>
+        <input type="range" id="z" min="1" max="2000" step="1" ng-model="pos_z">
+        <p>z: {{pos_z }}</p>
+    </div>
+
     <!-- <p>{{ name }}</p> -->
 
     <script src="js/angular.min.js"></script>

@@ -16,7 +16,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 current_location = open('json/current_location_map.json','r').read()
 current_location = json.loads(current_location)
-print current_location[0], current_location[1]
+print "Origin:", current_location[0], current_location[1]
 target_url = "https://maps.googleapis.com/maps/api/directions/json?origin="+str(current_location[0])+","+str(current_location[1])+"&destination=18.5329493,73.87961700000005&key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY"
 print "Fetching directions from source to destination..."
 json_data = urllib.urlopen(target_url).read()
