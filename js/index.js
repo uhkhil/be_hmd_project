@@ -62,18 +62,18 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 
 
 						var fetch_orientation = function () {
-							$interval(function() {
+							
 								$http.get('json/current_orientation.json').then(function(response) {
 									$scope.current_orientation = response.data;
 									console.log($scope.current_orientation);
 									camera.position.set($scope.pos_x , $scope.pos_y , $scope.pos_z);
 									// camera.lookAt(new THREE.Vector3($scope.look_x, $scope.look_y, $scope.look_z));
 									camera.rotation.x = $scope.current_orientation[0];
-									camera.rotation.y = $scope.current_orientation[1];
-									camera.rotation.z = $scope.current_orientation[2];
+									camera.rotation.y = -$scope.current_orientation[2];
+									camera.rotation.z = $scope.current_orientation[1];
 									renderer.render(scene, camera);
 								});
-							},1);
+						
 						};
 
 
