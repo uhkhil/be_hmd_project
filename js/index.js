@@ -66,12 +66,12 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 								camera.position.set($scope.pos_x , $scope.pos_y , $scope.pos_z);
 								// camera.lookAt(new THREE.Vector3($scope.look_x, $scope.look_y, $scope.look_z));
 								// Uncomment next 3 lines and comment the 3 lines after that for using the sliders
-								camera.rotation.x = $scope.roll;
-								camera.rotation.y = -$scope.pitch;
-								camera.rotation.z = $scope.yaw;
-								// camera.rotation.x = $scope.current_orientation[0];
-								// camera.rotation.y = -$scope.current_orientation[2];
-								// camera.rotation.z = $scope.current_orientation[1];
+								// camera.rotation.x = $scope.roll;
+								// camera.rotation.y = -$scope.pitch;
+								// camera.rotation.z = $scope.yaw;
+								camera.rotation.x = $scope.current_orientation[0];
+								camera.rotation.y = -$scope.current_orientation[2];
+								camera.rotation.z = $scope.current_orientation[1];
 								renderer.render(scene, camera);
 							});
 
