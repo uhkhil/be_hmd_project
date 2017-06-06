@@ -1,47 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Margana - BE Project</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-</head>
-<body cz-shortcut-listen="true" ng-app="myApp" ng-controller="myCtrl">
+<title>Margana</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<style>
+  body,h1 {font-family: Helvetica, sans-serif}
+  body, html {height: 100%}
+  .bgimg {
+    background-color: teal;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+<body>
 
-
-    <div id="canvas" style="position:relative;border: 1px solid black">
-        <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="The live feed comes here" style="position:absolute; z-index: -100;">
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-middle">
+    <a href="margana.html" style="text-decoration: none;"><h1 class="w3-animate-top">MARGANA</h1></a>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <!-- <p class="w3-large w3-center">Click to continue</p> -->
     </div>
-    <br><br>
- <!--    <div class="col-md-4">
-        <h4>Where the camera is looking at:</h4>
-        <input type="range" id="x" min="-10" max="10" step="0.01" ng-model="roll">
-        <p>Pitch: {{ roll }}</p>
-        <input type="range" id="y" min="-10" max="10" step="0.01" ng-model="pitch">
-        <p>Yaw: {{ pitch }}</p>
-        <input type="range" id="z" min="-10" max="10" step="0.01" ng-model="yaw">
-        <p>Roll: {{ yaw }}</p>
-    </div>
-
-    <div class="col-md-4">
-        <h4>Camera position:</h4>
-        <input type="range" id="x" min="-2000" max="2000" step="1" ng-model="pos_x">
-        <p>x: {{ pos_x }}</p>
-        <input type="range" id="y" min="-2000" max="2000" step="1" ng-model="pos_y">
-        <p>y: {{ pos_y }}</p>
-        <input type="range" id="z" min="1" max="2000" step="1" ng-model="pos_z">
-        <p>z: {{ pos_z }}</p>
-    </div> -->
-
-    <!-- <p>{{ name }}</p> -->
-
-    <script src="js/angular.min.js"></script>
-    <script src="js/three.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-        function errorFunction() {
-            alert('Stream stopped');
-        }
-    </script>
+  </div>
 
 </body>
 </html>

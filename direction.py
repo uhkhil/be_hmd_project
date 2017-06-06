@@ -9,21 +9,24 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 
-
-
 # Fetching JSON directions and storing into a list
 
 
-current_location = open('json/current_location_map.json','r').read()
-current_location = json.loads(current_location)
-print "Origin:", current_location[0], current_location[1]
-target_url = "https://maps.googleapis.com/maps/api/directions/json?origin="+str(current_location[0])+","+str(current_location[1])+"&destination=18.5329493,73.87961700000005&key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY"
+source = open('json/current_location_map.json','r').read()
+source = json.loads(source)
+destination = open('json/destination.json','r').read()
+destination = json.loads(destination)
+
+print "Source(Current location):", source[0], source[1]
+print "Destination:", destination[0], destination[1]
+
+target_url = "https://maps.googleapis.com/maps/api/directions/json?origin="+str(source[0])+","+str(source[1])+"&destination="+str(destination[0])+","+str(destination[1])+"+&key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY"
 print "Fetching directions from source to destination..."
 json_data = urllib.urlopen(target_url).read()
 
 
-# json_data = open('json/hometowadia.json').read()
-# json_data = open('json/dorabjeetoairport.json').read()
+# json_data = open('json/maps/hometowadia.json').read()
+# json_data = open('json/maps/dorabjeetoairport.json').read()
 
 data = json.loads(json_data)
 
