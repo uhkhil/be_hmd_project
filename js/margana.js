@@ -32,6 +32,8 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 
 			document.getElementById('canvas').appendChild( renderer.domElement );
 
+
+
 			var geometry = new THREE.Geometry();
 
 			for (var i = 0; i < x_list.length; i++) {
@@ -48,6 +50,10 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 			var line = new THREE.Line(geometry, material);
 
 			scene.add(line);
+
+
+
+
 
 			var fetch_current_position = function () {
 
