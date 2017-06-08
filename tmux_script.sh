@@ -8,16 +8,16 @@ tmux new-window -t $SESSION:1 -n 'Logs'
 tmux split-window -h
 tmux select-pane -t 0
 # tmux resize-pane -D 20
-tmux send-keys "sudo python gps.py" C-
+tmux send-keys "sudo python gps.py" C-m
 tmux select-pane -t 1
-tmux send-keys "python direction.py" C-m
+tmux send-keys "python direction.py"
 tmux split-window -h
 tmux select-pane -t 2
-# tmux send-keys "python ../RTIMULib2/Linux/python/tests/be_hmd_project.py" C-m
-tmux send-keys "python camera_position_updater.py" C-m
+# tmux send-keys "python ../RTIMULib2/Linux/python/tests/be_hmd_project.py"
+tmux send-keys "python camera_position_updater.py"
 tmux split-window -v
 tmux select-pane -t 3
-tmux send-keys "python client/current_location.py" C-m
+tmux send-keys "python client/current_location.py"
 
 
 tmux select-pane -t 0
