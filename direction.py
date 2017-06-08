@@ -4,8 +4,8 @@ import urllib
 import json
 import pyproj
 import math
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+# import matplotlib.pyplot as plt
+# from mpl_toolkits.mplot3d import Axes3D
 
 
 
@@ -43,7 +43,6 @@ for x in data['routes'][0]['legs'][0]['steps']:
 
 
 
-
 # Converting Map coordinates to x and y coordinates
 
 x_coord = lat
@@ -65,7 +64,6 @@ print
 
 
 
-
 # Make source the origin
 
 x_init = x_coord[0]
@@ -78,7 +76,6 @@ init_points_file.close()
 for i in range(len(x_coord)):
 	x_coord[i] -= x_init
 	y_coord[i] -= y_init
-
 
 
 
@@ -114,8 +111,6 @@ for i in range(len(x_coord_new)):
 
 
 
-
-
 # Write the output to overlay file
 
 outputfile = open('json/overlay.json', 'w')
@@ -125,20 +120,17 @@ outputfile.close()
 
 
 
-
-
-
 # Print the map
 
 # 3D
 
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-ax.plot(x_coord_new, y_coord_new, z_coord_new, label='Source to Destination')
-plt.axis('equal')
-ax.legend()
+# fig = plt.figure()
+# ax = fig.gca(projection='3d')
+# ax.plot(x_coord_new, y_coord_new, z_coord_new, label='Source to Destination')
+# plt.axis('equal')
+# ax.legend()
 
-plt.show()
+# plt.show()
 
 
 

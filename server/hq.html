@@ -14,96 +14,58 @@
 </style>
 
 <!-- Dependencies: JQuery and GMaps API should be loaded first -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-<!-- <script src="../js/geolocation-marker-exports.js"></script>
-  <script src="../js/geolocation-marker.js"></script> -->
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/angular.min.js"></script>
-  <script src="hq.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="../js/geolocation-marker-exports.js"></script>
+<script src="../js/geolocation-marker.js"></script> -->
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="hq.js"></script>
 
 
-  <style>
-    .card-1 {
-      min-height: 350px;
-      width: 47%
-    }
-    .text-1 {
-      width: 120px;
-    }
-    .text-2 {
-      width: 40px;
-    }
-  </style>
+<style>
+  .card {
+    min-height: 350px;
+    width: 47%
+  }
+  .text-1 {
+    width: 120px;
+  }
+  .text-2 {
+    width: 40px;
+  }
+</style>
 
 
-  <body ng-app="serverApp" ng-controller="serverCtrl" id="outer" class="w3-teal">
+<body ng-app="serverApp" ng-controller="serverCtrl" class="w3-teal">
 
-    <!-- Header -->
-    <header class="w3-container w3-theme " id="myHeader">
-      <div class="w3-center">
-        <h1 class="">Margana</h1>
+  <!-- Header -->
+  <header class="w3-container w3-theme " id="myHeader">
+    <div class="w3-center">
+      <h1 class="">Margana</h1>
+    </div>
+  </header>
+
+
+  <div class="w3-padding w3-center">
+
+
+
+    <div class="w3-card-4 w3-half w3-margin w3-white card">
+      <h5>Map</h5>
+      <!-- <div id="map_canvas"></div> -->
+      <div id="map" style="width:100%;height:500px"></div>
+    </div>
+
+
+
+    <div class="w3-card-4 w3-half w3-margin w3-white card">
+      <h5>Live Feed</h5>
+      <div id="canvas" style="margin-top: 30px;">
+        <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="The live feed comes here..." z-index: -100;">
       </div>
-    </header>
+    </div>
 
-
-    <div class="w3-padding w3-center">
-
-
-      <div class="w3-card-4 w3-half w3-margin w3-white card-1">
-        <h5>Map</h5>
-        <!-- <div id="map_canvas"></div> -->
-        <div id="map" style="width:100%;height:500px"></div>
-
-
-        <script>
-
-          function myMap() {
-
-            setInterval(function () {
-              console.log('it works' + new Date());
-
-
-              $.getJSON("../json/current_location_map.json", function(json) {
-                console.log(json[0]); // this will show the info it in firebug console
-                var lat = json[0];
-                var lng = json[1];
-
-
-                var mapCanvas = document.getElementById("map");
-                var myCenter = new google.maps.LatLng(lat,lng); 
-                var mapOptions = {center: myCenter, zoom: 16};
-                var map = new google.maps.Map(mapCanvas,mapOptions);
-                var marker = new google.maps.Marker({
-                  position: myCenter,
-                  animation: google.maps.Animation.BOUNCE,
-                  visible: true
-                });
-                marker.setMap(map);
-
-              });
-
-            },10000);
-
-          }
-
-        </script>
-
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY&callback=myMap"></script>
-      </div>
-
-
-      <div class="w3-card-4 w3-half w3-margin w3-white card-1">
-        <h5>Live Feed</h5>
-        <div id="canvas">
-          <img src="http://raspberrypi:8080/stream/video.mjpeg" alt="The live feed comes here..." z-index: -100;">
-        </div>
-      </div>
-
-
-
-
-        <!-- <div class="w3-card-4 w3-white w3-half w3-margin w3-center card-1 w3-padding">
+        <!-- <div class="w3-card-4 w3-white w3-half w3-margin w3-center card w3-padding">
           <fieldset class="gllpLatlonPicker" style="border: none;" >
             <input type="text" class="gllpSearchField" placeholder="Type a location">
             <input type="button" class="gllpSearchButton" value="search" >
@@ -120,17 +82,11 @@
           </fieldset>
         </div> -->
 
-
-
-        <div class="w3-card w3-white w3-half w3-margin card-1" >
+        <div class="w3-card w3-white w3-half w3-margin card" >
           <h5>Audio transmission</h5>
-
-
+          
           <div class="wrapper" style="height: 350px;">
-
-
             <canvas class="visualizer" width="100%" height="350px"></canvas> 
-
             <form class="controls" style="display: none;">
               <div>
                 <label for="voice">Voice setting</label>
@@ -153,10 +109,7 @@
                 <a class="mute" id="">Mute</a>
               </div>
             </form>
-
-
           </div>
-
 
         </div>
 
@@ -177,13 +130,47 @@
      <script src="../js/jquery-gmaps-latlon-picker.js"></script> -->
 
 
-
+     <!-- Audio transmission js -->
      <!-- The following element pulls in the script for the default template functionality -->
      <script src="../js/install.js"></script>  
-
      <!-- Below is your custom application script -->
      <script src="../js/app.js"></script>
 
 
    </body>
    </html>
+
+
+   <script>
+
+    function myMap() {
+
+      setInterval(function () {
+        console.log('it works' + new Date());
+
+
+        $.getJSON("../json/current_location_map.json", function(json) {
+                console.log(json[0]); // this will show the info it in firebug console
+                var lat = json[0];
+                var lng = json[1];
+
+
+                var mapCanvas = document.getElementById("map");
+                var myCenter = new google.maps.LatLng(lat,lng); 
+                var mapOptions = {center: myCenter, zoom: 16};
+                var map = new google.maps.Map(mapCanvas,mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                  animation: google.maps.Animation.BOUNCE,
+                  visible: true
+                });
+                marker.setMap(map);
+
+              });
+
+      },10000);
+
+    }
+
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY&callback=myMap"></script>

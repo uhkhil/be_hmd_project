@@ -53,14 +53,13 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 
 
 
-
-
 			var fetch_current_position = function () {
 
 				$interval(function() {
 
 					$http.get('json/current_location_x.json').then(function(response) {
 						$scope.current_location = response.data;
+						var location = $scope.current_location;
 						console.log($scope.current_location);
 
 
@@ -70,6 +69,7 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 								$scope.current_orientation = response.data;
 								console.log($scope.current_orientation);
 								camera.position.set($scope.pos_x , $scope.pos_y , $scope.pos_z);
+								// camera.position.set(location[0] , location[1] , location[2]);
 								// camera.lookAt(new THREE.Vector3($scope.look_x, $scope.look_y, $scope.look_z));
 								// Uncomment next 3 lines and comment the 3 lines after that for using the sliders
 								// camera.rotation.x = $scope.roll;

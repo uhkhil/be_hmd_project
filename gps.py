@@ -35,7 +35,7 @@ while True:
         output_file.close()
 
 
-    time.sleep(1) # sleep 1 seconf
+    time.sleep(1) # sleep 1 second
 
     # Loop restarts once the sleep is finished
 
