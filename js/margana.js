@@ -13,7 +13,7 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 	var x_list;
 	$scope.fetched_data = []
 	var fetch = function (end) {
-		$http.get('json/overlay.json').then(function (response) {
+		$http.get('../json/overlay.json').then(function (response) {
 			$scope.fetched_data = response.data;
 			console.log($scope.fetched_data);
 
@@ -57,7 +57,7 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 
 				$interval(function() {
 
-					$http.get('json/current_location_x.json').then(function(response) {
+					$http.get('../json/current_location_x.json').then(function(response) {
 						$scope.current_location = response.data;
 						var location = $scope.current_location;
 						console.log($scope.current_location);
@@ -65,7 +65,7 @@ app.controller('myCtrl', function($scope, $http, $interval) {
 
 						var fetch_orientation = function () {
 							
-							$http.get('json/current_orientation.json').then(function(response) {
+							$http.get('../json/current_orientation.json').then(function(response) {
 								$scope.current_orientation = response.data;
 								console.log($scope.current_orientation);
 								camera.position.set($scope.pos_x , $scope.pos_y , $scope.pos_z);

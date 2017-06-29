@@ -11,18 +11,6 @@
     padding: 0;
     height: 300px;
   }
-</style>
-
-<!-- Dependencies: JQuery and GMaps API should be loaded first -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="../js/geolocation-marker-exports.js"></script>
-<script src="../js/geolocation-marker.js"></script> -->
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../js/angular.min.js"></script>
-<script src="hq.js"></script>
-
-
-<style>
   .card {
     min-height: 350px;
     width: 47%
@@ -36,7 +24,8 @@
 </style>
 
 
-<body ng-app="serverApp" ng-controller="serverCtrl" class="w3-teal">
+
+<body  class="w3-teal">
 
   <!-- Header -->
   <header class="w3-container w3-theme " id="myHeader">
@@ -49,7 +38,7 @@
   <div class="w3-padding w3-center">
 
 
-
+    <!-- Map Card -->
     <div class="w3-card-4 w3-half w3-margin w3-white card">
       <h5>Map</h5>
       <!-- <div id="map_canvas"></div> -->
@@ -57,7 +46,7 @@
     </div>
 
 
-
+    <!-- Live Feed Card -->
     <div class="w3-card-4 w3-half w3-margin w3-white card">
       <h5>Live Feed</h5>
       <div id="canvas" style="margin-top: 30px;">
@@ -65,112 +54,58 @@
       </div>
     </div>
 
-        <!-- <div class="w3-card-4 w3-white w3-half w3-margin w3-center card w3-padding">
-          <fieldset class="gllpLatlonPicker" style="border: none;" >
-            <input type="text" class="gllpSearchField" placeholder="Type a location">
-            <input type="button" class="gllpSearchButton" value="search" >
-            <br/><br/>
-            <div class="gllpMap" style="margin-left: 50px;">Google Maps</div>
-            <br/>
-            lat/lon:
-            <input type="text" class="gllpLatitude text-1" value="{{lat}}"/>
-            /
-            <input type="text" class="gllpLongitude text-1" value="{{lng}}"/>
-            zoom: <input type="text" class="gllpZoom text-2" value="14"/>
-            <input type="button" class="gllpUpdateButton" value="update map">
-            <br/>
-          </fieldset>
-        </div> -->
+    <!-- Audio Transmission Card -->
+    <div class="w3-card w3-white w3-half w3-margin card" >
+      <h5>Audio transmission</h5>
 
-        <div class="w3-card w3-white w3-half w3-margin card" >
-          <h5>Audio transmission</h5>
-          
-          <div class="wrapper" style="width: 100%; height: 350px;">
-            <canvas class="visualizer" width="100%" height="350px"></canvas> 
-            <form class="controls" style="display: none;">
-              <div>
-                <label for="voice">Voice setting</label>
-                <select id="voice" name="voice">
-                  <option value="distortion">Distortion</option>
-                  <option value="convolver">Reverb</option>
-                  <option value="biquad">Bass Boost</option>
-                  <option value="off" selected="">Off</option>
-                </select>
-              </div>
-              <div>
-                <label for="visual">Visualizer setting</label>
-                <select id="visual" name="visual">
-                  <option value="sinewave" selected="">Sinewave</option>
-                  <option value="frequencybars">Frequency bars</option>
-                  <option value="off">Off</option>
-                </select>
-              </div>
-              <div>
-                <a class="mute" id="">Mute</a>
-              </div>
-            </form>
+      <div class="wrapper" style="width: 100%; height: 350px;">
+        <canvas class="visualizer" width="100%" height="350px"></canvas> 
+        <form class="controls" style="display: none;">
+          <div>
+            <label for="voice">Voice setting</label>
+            <select id="voice" name="voice">
+              <option value="distortion">Distortion</option>
+              <option value="convolver">Reverb</option>
+              <option value="biquad">Bass Boost</option>
+              <option value="off" selected="">Off</option>
+            </select>
           </div>
-
-        </div>
-
-
-
+          <div>
+            <label for="visual">Visualizer setting</label>
+            <select id="visual" name="visual">
+              <option value="sinewave" selected="">Sinewave</option>
+              <option value="frequencybars">Frequency bars</option>
+              <option value="off">Off</option>
+            </select>
+          </div>
+          <div>
+            <a class="mute" id="">Mute</a>
+          </div>
+        </form>
       </div>
 
+    </div>
 
 
 
-
-      <!-- Dependencies: JQuery and GMaps API should be loaded first -->
-      <script src="../js/jquery-2.1.1.min.js"></script>
-      <!-- <script src="../js/gmaps.js"></script> -->
-
-      <!-- CSS and JS for our code -->
-     <!--  <link rel="stylesheet" type="text/css" href="../css/jquery-gmaps-latlon-picker.css"/>
-     <script src="../js/jquery-gmaps-latlon-picker.js"></script> -->
+  </div>
 
 
-     <!-- Audio transmission js -->
-     <!-- The following element pulls in the script for the default template functionality -->
-     <script src="../js/install.js"></script>  
-     <!-- Below is your custom application script -->
-     <script src="../js/app.js"></script>
+</body>
+</html>
 
 
-   </body>
-   </html>
+
+<!-- Dependencies -->
+<script src="../js/jquery-2.1.1.min.js"></script>
 
 
-   <script>
-
-    function myMap() {
-
-      setInterval(function () {
-        console.log('it works' + new Date());
-
-
-        $.getJSON("../json/current_location_map.json", function(json) {
-                console.log(json[0]); // this will show the info it in firebug console
-                var lat = json[0];
-                var lng = json[1];
+<!-- Audio transmission js -->
+<!-- The following element pulls in the script for the default template functionality -->
+<script src="../js/install.js"></script>  
+<!-- Below is your custom application script -->
+<script src="../js/app.js"></script>
 
 
-                var mapCanvas = document.getElementById("map");
-                var myCenter = new google.maps.LatLng(lat,lng); 
-                var mapOptions = {center: myCenter, zoom: 16};
-                var map = new google.maps.Map(mapCanvas,mapOptions);
-                var marker = new google.maps.Marker({
-                  position: myCenter,
-                  animation: google.maps.Animation.BOUNCE,
-                  visible: true
-                });
-                marker.setMap(map);
-
-              });
-
-      },10000);
-
-    }
-
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY&callback=myMap"></script>
+<script src="../js/hq.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpmgg9nlSd1RtvmlGlr-626SGlzVw1UiY&callback=myMap"></script>
