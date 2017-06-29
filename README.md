@@ -10,6 +10,7 @@ The Raspberry Pi is the HMD and a laptop is the HQ (Head quarters). A Mobile Hot
 3) Adafruit Ultimate GPS (interfaced using USB to TTL cable) [https://www.adafruit.com/product/746]
 4) NoIR Camera v2 [https://www.raspberrypi.org/products/pi-noir-camera-v2/]
 5) GY-87 IMU 10 DOF (6 axis used in our case) [https://github.com/RTIMULib/RTIMULib2]
+
 Note: The IMU has to be soldered on from the back of the Pi, since the black headers are taken up by the display.
 
 
