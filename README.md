@@ -1,4 +1,4 @@
-# be_hmd_project
+# MARGANA - HMD Project
 The software for a Raspberry Pi-enabled Head mounted display (HMD) which shows navigational guides along with live streaming and audio transmission.
 
 
@@ -22,6 +22,7 @@ HMD:
 4) Install missing packages using apt (or apt-get) [sudo apt install <package-name>]
 5) Install missing python packages using pip [sudo pip -h install <python-package-name>]
 6) Open hmd/index.html using Firefox on the Pi
+
 HQ:
 1) Go into 'hq' directory [cd Git/be_hmd_project/hq]
 2) python audio.py
