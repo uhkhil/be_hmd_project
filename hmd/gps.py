@@ -23,7 +23,7 @@ while True:
 	    	lat_min = lat_min/60
 	    	lat = math.floor(lat)+ lat_min
 	    	lng_min = (lng - math.floor(lng))*100
-		lng_min = lng_min/60
+			lng_min = lng_min/60
 	    	lng = math.floor(lng)+ lng_min
 	    	print "Lat, Long: ", lat, lng,
 
