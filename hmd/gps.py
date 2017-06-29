@@ -24,13 +24,13 @@ while True:
     	print "Lat, Long: ", lat, lng,
 
 
-        output_file = open("json/current_location_map.json",'w')
+        output_file = open("../json/current_location_map.json",'w')
         output_file.write("["+str(lat)+","+str(lng)+"]")
         output_file.close()
 
         x,y = p1(lng,lat)
         print "x, y: ",x, y
-        output_file = open("json/current_location_x.json",'w')
+        output_file = open("../json/current_location_x.json",'w')
         output_file.write("["+str(x)+","+str(y)+"]")
         output_file.close()
 

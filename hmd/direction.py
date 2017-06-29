@@ -12,9 +12,9 @@ import math
 # Fetching JSON directions and storing into a list
 
 
-source = open('json/current_location_map.json','r').read()
+source = open('../json/current_location_map.json','r').read()
 source = json.loads(source)
-destination = open('json/destination.json','r').read()
+destination = open('../json/destination.json','r').read()
 destination = json.loads(destination)
 
 print "Source(Current location):", source[0], source[1]
@@ -69,7 +69,7 @@ print
 x_init = x_coord[0]
 y_init = y_coord[0]
 
-init_points_file = open('json/initial.json', 'w')
+init_points_file = open('../json/initial.json', 'w')
 init_points_file.write("["+str(x_init)+","+str(y_init)+"]")
 init_points_file.close()
 
@@ -113,7 +113,7 @@ for i in range(len(x_coord_new)):
 
 # Write the output to overlay file
 
-outputfile = open('json/overlay.json', 'w')
+outputfile = open('../json/overlay.json', 'w')
 outputfile.write(json.dumps([x_coord_new,y_coord_new,z_coord_new]))
 outputfile.close()
 

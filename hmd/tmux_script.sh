@@ -13,7 +13,6 @@ tmux select-pane -t 1
 tmux send-keys "python direction.py"
 tmux split-window -h
 tmux select-pane -t 2
-# tmux send-keys "python ../RTIMULib2/Linux/python/tests/be_hmd_project.py"
 tmux send-keys "python camera_position_updater.py"
 tmux split-window -v
 tmux select-pane -t 3
