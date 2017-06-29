@@ -3,7 +3,7 @@ The software for a Raspberry Pi-enabled Head mounted display (HMD) which shows n
 
 
 
-Hardware:
+### Hardware:
 The Raspberry Pi is the HMD and a laptop is the HQ (Head quarters). A Mobile Hotspot is used as the network. The following hardware was used. Follow the official guide/link for installation.
 1) Raspberry Pi 3 B [https://www.raspberrypi.org/products/raspberry-pi-3-model-b/]
 2) 3.2 inch Waveshare TFT display [http://www.waveshare.com/3.2inch-rpi-lcd-b.htm]
@@ -14,7 +14,7 @@ Note: The IMU has to be soldered on from the back of the Pi, since the black hea
 
 
 
-Setup the system:
+### Setup the system:
 HMD:
 1) SSH onto the HMD from the HQ [ssh pi@192.168.43.142]
 2) Go into 'hmd' directory [cd Git/be_hmd_project/hmd]
@@ -29,7 +29,7 @@ HQ:
 
 
 
-Overview of the project file structure:
+### Overview of the project file structure:
 1) hmd/gps.py - Keeps taking the current location of the user.
 2) hmd/direction.py - Fetches the directions from Maps API, parses it, transforms it into a 3D map, and stores the output to overlay.json.
 3) hmd/camera_position_updater.py - Updates the current position of user wrt the intial location.
