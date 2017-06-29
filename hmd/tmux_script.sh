@@ -16,7 +16,7 @@ tmux select-pane -t 2
 tmux send-keys "python camera_position_updater.py" C-m
 tmux split-window -v
 tmux select-pane -t 3
-tmux send-keys "python client/current_location.py" C-m
+tmux send-keys "python current_location.py" C-m
 
 
 tmux select-pane -t 0

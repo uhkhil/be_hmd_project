@@ -6,7 +6,7 @@ ser = serial.Serial('/dev/ttyUSB0', 9600)
 
 p1 = pyproj.Proj(init='epsg:24047')
 
-print "Waiting for Fix. Make sure the GPS is outdoors and under a clear sky. Rerun this code if no output for a while."
+print "Waiting for Fix. Make sure the GPS is outdoors and under a clear sky. Rerun this code if no output for a while. Run the direction.py code after getting a stable location here."
 print
 
 while True:
@@ -28,13 +28,13 @@ while True:
 	    	print "Lat, Long: ", lat, lng,
 
 
-	        output_file = open("json/current_location_map.json",'w')
+	        output_file = open("../json/current_location_map.json",'w')
 	        output_file.write("["+str(lat)+","+str(lng)+"]")
 	        output_file.close()
 
 	        x,y = p1(lng,lat)
 	        print "x, y: ",x, y
-	        output_file = open("json/current_location_x.json",'w')
+	        output_file = open("../json/current_location_x.json",'w')
 	        output_file.write("["+str(x)+","+str(y)+"]")
         	output_file.close()
 
