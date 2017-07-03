@@ -28,6 +28,7 @@ HQ:
 1) Go into 'hq' directory [cd Git/be_hmd_project/hq]
 2) python audio.py
 3) python destination.py
+4) Visit raspberrypi:8080/stream from any device on the same network
 
 
 
